@@ -27,6 +27,14 @@ public class GameManager : MonoBehaviour
 
     // 現在のターン(0 or 1)
     private int currentPlayer = 0;
+
+    void Awake(){
+        if (Instance == null){
+            Instance = this;
+        }else{
+            Destroy(GameObject);
+        }
+    }
     
     public void Start()
     {
