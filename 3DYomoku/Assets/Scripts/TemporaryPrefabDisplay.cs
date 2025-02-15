@@ -4,15 +4,25 @@ using UnityEngine;
 
 public class TemporaryPrefabDisplay : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    public GameObject TemporaryPrefabWhite;
+    public GameObject TemporaryPrefabBlack;
+
+    public GameManager GameManager;
+
+    // カーソルが乗った時の処理
+    void OnMouseEnter(){
+        if (GameObject.CompareTag("TargetPrefab")){
+            Debug.Log("TemporaryprefabDisplay: カーソルが" + GameObject.name + "に触れました");
+            if (GameManager.Instance != null){
+                if (GameManager.Instance.currentPlayer == 0){
+                    
+                }
+            }
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    // カーソルが離れたときの処理
+    void OnMouseExit(){
+
     }
 }

@@ -16,12 +16,7 @@ public class GameStart : MonoBehaviour
         for (int i = 0; i < rows; i++){
             for (int j = 0; j < columns; j++){
                 Vector3 spawnPos = startPosition + new Vector3(j, 0, i);
-                GameObject boardpart = Instantiate(boardpartsPrefab, spawnPos, Quaternion.identity, transform);
-                GridCoordinates gc = boardpart.GetComponent<GridCoordinates>();
-                if (gc != null){
-                    gc.x = i;
-                    gc.y = j;
-                }
+                GameObject boardpart = Instantiate(boardpartsPrefab, spawnPos, Quaternion.identity);
             }
         }        
     }
