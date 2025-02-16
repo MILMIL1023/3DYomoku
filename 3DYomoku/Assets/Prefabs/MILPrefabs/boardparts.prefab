@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2754821733110650623}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: BoardParts
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 6187795544835581895}
   m_Layer: 0
   m_Name: Cylinder
-  m_TagString: Untagged
+  m_TagString: BoardParts
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -223,7 +223,7 @@ GameObject:
   - component: {fileID: 745283607153092122}
   m_Layer: 0
   m_Name: boardparts
-  m_TagString: Untagged
+  m_TagString: BoardParts
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -237,7 +237,7 @@ Transform:
   m_GameObject: {fileID: 7341187856338962005}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.4629164, y: -1.5110703, z: 1.8267727}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

@@ -13,8 +13,8 @@ public class BoardManager : MonoBehaviour
         for (int i = 0; i < gridSize; i++){
             for (int j = 0; j < gridSize; j++){
                 Vector3 spawnPos = new Vector3(j, 0, i);
-                GameObject boardparts = Instantiate(boardpartsPrefab, spawnPos, Quaternion.identity, transform);
-                boardparts.tag = "BoardParts";
+                Instantiate(boardpartsPrefab, spawnPos, Quaternion.identity);
+
             }
         }        
     }
