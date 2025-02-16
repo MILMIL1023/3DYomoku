@@ -1,14 +1,3 @@
-/*
-ToDoList
-・勝敗判定(CheckWin)
-・石を置く(PlacePiece)
-・次のプレイヤーに切り替えUI表示(NextTurn)
-・リザルト画面(EndGame)
-・リスタート(RestartGame)
-できたらいいなー
-・ワールド座標から盤面の配列に変換(ConvertWorldToGrid)
-*/
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
