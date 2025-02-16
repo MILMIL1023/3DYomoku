@@ -35,11 +35,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void test()
-    {
-        Debug.Log("test");
-    }
-
     // 石を配置する処理
     public void PlacePiece(GameObject stone)
     {
