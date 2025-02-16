@@ -116,6 +116,7 @@ public class CameraBasedSpawner : MonoBehaviour
                     GameObject spawnedObject = Instantiate(prefab, spawnPosition, Quaternion.identity);
 
                     Collider spawnedCollider = spawnedObject.GetComponent<Collider>();
+                    
                     if (spawnedCollider != null)
                     {
                         spawnedCollider.enabled = false; // コライダー無効化
