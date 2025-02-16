@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance;
-
+    public PositionDisplay positionDisplay; // PositionDisplay スクリプトへの参照
     // ボードのサイズ設定
     public int boardWidth = 4;
     public int boardHeight = 4;
@@ -16,14 +15,6 @@ public class GameManager : MonoBehaviour
 
     // 現在のターン(0 or 1)
     public int currentPlayer = 0;
-
-    void Awake(){
-        if (Instance == null){
-            Instance = this;
-        }else{
-            Destroy(gameObject);
-        }
-    }
     
     public void Start()
     {
@@ -45,9 +36,8 @@ public class GameManager : MonoBehaviour
     }
 
     // 石を配置する処理
-    public void PlacePiece(Vector3 worldPos)
+    public void PlacePiece()
     {
-        // 入力はx, yとする
         int x, y, z;
         x = 0;
         y = 0;
@@ -71,6 +61,15 @@ public class GameManager : MonoBehaviour
         }else{
             NextTurn();
         }
+    }
+
+    // 座標から配列に変換
+    public Vector3Int WorldToBoard(Vector3 worldPos)
+    {
+        int x = Mathf.FloorToInt(worldPos.x);
+        int y = Mathf.FloorToInt(worldPos.y);
+        int z = Mathf.FloorToInt(worldPos.z);
+        return new Vector3Int(x, y, z);
     }
 
     // 石が置けるかのチェック
