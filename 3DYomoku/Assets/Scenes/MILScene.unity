@@ -169,55 +169,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &310695843
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 310695845}
-  - component: {fileID: 310695844}
-  m_Layer: 0
-  m_Name: StoneSpawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &310695844
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 310695843}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b3f043b08786004cb79d8cdb3da57f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefab: {fileID: 5549139479350750391, guid: ffd5faaf348b32f4986398e1f42bba7a, type: 3}
-  cameras:
-  - {fileID: 694023695}
-  clickableTag: Clickable
-  spawnedObjects: []
---- !u!4 &310695845
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 310695843}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.457613, y: -0.63941383, z: -2.311596}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &694023693
 GameObject:
   m_ObjectHideFlags: 0
@@ -356,7 +307,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baba160d1828daf4eb552d74d87f0f84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraBasedSpawner: {fileID: 0}
   boardWidth: 4
   boardHeight: 4
   boardDepth: 4
@@ -388,59 +338,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b3f043b08786004cb79d8cdb3da57f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
-  cameras: []
+  Blackprefab: {fileID: 5549139479350750391, guid: ffd5faaf348b32f4986398e1f42bba7a, type: 3}
+  Whiteprefab: {fileID: 3860410246199037136, guid: dadb3e1f3dc708b42a0bf4aace788e93, type: 3}
+  cameras:
+  - {fileID: 694023695}
   clickableTag: Clickable
   spawnedObjects: []
---- !u!1 &1059561846
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1059561848}
-  - component: {fileID: 1059561847}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1059561847
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1059561846}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baba160d1828daf4eb552d74d87f0f84, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cameraBasedSpawner: {fileID: 0}
-  boardWidth: 4
-  boardHeight: 4
-  boardDepth: 4
-  currentPlayer: 0
---- !u!4 &1059561848
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1059561846}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.457613, y: -0.63941383, z: -2.311596}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  gameManager: {fileID: 0}
 --- !u!1001 &1200893233
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -610,8 +514,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 694023696}
   - {fileID: 1851569042}
-  - {fileID: 1059561848}
-  - {fileID: 310695845}
   - {fileID: 69488481}
   - {fileID: 793385481}
   - {fileID: 1200893233}
