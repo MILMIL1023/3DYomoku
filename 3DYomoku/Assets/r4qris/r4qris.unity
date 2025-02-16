@@ -124,9 +124,12 @@ NavMeshSettings:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 --- !u!1 &224822807
 
 =======
+=======
+>>>>>>> Stashed changes
 --- !u!1 &846851419
 >>>>>>> Stashed changes
 GameObject:
@@ -174,8 +177,11 @@ MonoBehaviour:
   clickableTag: Clickable
   spawnedObjects: []
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 --- !u!114 &224822809
 =======
+=======
+>>>>>>> Stashed changes
 --- !u!4 &846851421
 Transform:
   m_ObjectHideFlags: 0
@@ -718,6 +724,9 @@ Animator:
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1788699684
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 GameObject:
   m_ObjectHideFlags: 0
@@ -726,6 +735,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
   - component: {fileID: 1825292288}
   - component: {fileID: 1825292287}
@@ -737,11 +747,18 @@ GameObject:
   m_Layer: 0
   m_Name: WinManager
 >>>>>>> Stashed changes
+=======
+  - component: {fileID: 1788699686}
+  - component: {fileID: 1788699687}
+  m_Layer: 0
+  m_Name: WinManager
+>>>>>>> Stashed changes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 --- !u!114 &1825292287
 MonoBehaviour:
@@ -760,16 +777,26 @@ MonoBehaviour:
 =======
 --- !u!4 &1788699686
 >>>>>>> Stashed changes
+=======
+--- !u!4 &1788699686
+>>>>>>> Stashed changes
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_GameObject: {fileID: 1825292286}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 12.554492, y: -7.1711035, z: 16.121166}
+=======
+  m_GameObject: {fileID: 1788699684}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.1582184, y: -3.4910161, z: 19.978582}
+>>>>>>> Stashed changes
 =======
   m_GameObject: {fileID: 1788699684}
   serializedVersion: 2
@@ -782,8 +809,11 @@ Transform:
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 --- !u!1 &1917756333
 =======
+=======
+>>>>>>> Stashed changes
 --- !u!114 &1788699687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1094,16 +1124,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_SourcePrefab: {fileID: 100100000, guid: b2ebd2c1e876e4d4cb970126427fab09, type: 3}
 
 
 =======
+=======
+>>>>>>> Stashed changes
   m_SourcePrefab: {fileID: 100100000, guid: 19404e2dcc2b96046a2f34b8bdc6be6d, type: 3}
 --- !u!1001 &2209024609721334416
 PrefabInstance:
@@ -1276,6 +1312,9 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef9423b354a3a544b830ddedcfc0a716, type: 3}
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
@@ -1295,6 +1334,7 @@ SceneRoots:
   - {fileID: 1297376788}
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   - {fileID: 2024396053}
   - {fileID: 1565258090}
   - {fileID: 846851421}
@@ -1311,6 +1351,14 @@ SceneRoots:
   - {fileID: 1788699686}
 >>>>>>> Stashed changes
 >>>>>>> e3c26d8e603fab58f1138e50cfe8555abf8402f7
+=======
+  - {fileID: 3526573996556586889}
+  - {fileID: 846851421}
+  - {fileID: 2071435970}
+  - {fileID: 5877596399686606728}
+  - {fileID: 2209024609721334416}
+  - {fileID: 1788699686}
+>>>>>>> Stashed changes
 =======
   - {fileID: 3526573996556586889}
   - {fileID: 846851421}
