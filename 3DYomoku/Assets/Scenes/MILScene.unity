@@ -303,7 +303,7 @@ Transform:
   m_GameObject: {fileID: 694023693}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 10, y: 10, z: 10}
+  m_LocalPosition: {x: 10, y: 7, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -320,7 +320,7 @@ GameObject:
   - component: {fileID: 793385481}
   - component: {fileID: 793385480}
   - component: {fileID: 793385483}
-  - component: {fileID: 793385482}
+  - component: {fileID: 793385484}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -357,21 +357,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &793385482
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 793385479}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5caa11107f8de84cb51de8f35ae3a0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TemporaryPrefabWhite: {fileID: 3809752316761356447, guid: 4cd8fc80787cd924b8b73929a2e37841, type: 3}
-  TemporaryPrefabBlack: {fileID: 7308170767557267618, guid: 227b6e1ab4c8f274ea04a82a1f8d55ff, type: 3}
-  GameManager: {fileID: 1059561847}
 --- !u!114 &793385483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -388,6 +373,21 @@ MonoBehaviour:
   boardHeight: 4
   boardDepth: 4
   currentPlayer: 0
+--- !u!114 &793385484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 793385479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5caa11107f8de84cb51de8f35ae3a0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TemporaryPrefabWhite: {fileID: 3809752316761356447, guid: 4cd8fc80787cd924b8b73929a2e37841, type: 3}
+  TemporaryPrefabBlack: {fileID: 7308170767557267618, guid: 227b6e1ab4c8f274ea04a82a1f8d55ff, type: 3}
+  GameManager: {fileID: 1059561847}
 --- !u!1 &1059561846
 GameObject:
   m_ObjectHideFlags: 0
