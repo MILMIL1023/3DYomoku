@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public PositionDisplay positionDisplay; // PositionDisplay スクリプトへの参照
+    public CameraBasedSpawner cameraBasedSpawner; // CameraBasedSpawner スクリプトへの参照
     // ボードのサイズ設定
     public int boardWidth = 4;
     public int boardHeight = 4;
@@ -39,10 +39,11 @@ public class GameManager : MonoBehaviour
     public void PlacePiece()
     {
         int x, y, z;
-        x = 0;
-        y = 0;
         // 座標を配列に変換する関数
-        
+        List<Vector3> positions = cameraBasedSpawner.GetObjectPositions();
+        Vector3 stoneposition = WorldToBoard(positions[0]);
+        x = (int)stoneposition.x;
+        y = (int)stoneposition.z;
         
         // 石が置けるか判定
         while (!IsValidPlacement(x, y)){
@@ -66,9 +67,9 @@ public class GameManager : MonoBehaviour
     // 座標から配列に変換
     public Vector3Int WorldToBoard(Vector3 worldPos)
     {
-        int x = Mathf.FloorToInt(worldPos.x);
-        int y = Mathf.FloorToInt(worldPos.y);
-        int z = Mathf.FloorToInt(worldPos.z);
+        int x = (int)worldPos.x;
+        int y = (int)worldPos.y;
+        int z = (int)worldPos.z;
         return new Vector3Int(x, y, z);
     }
 
