@@ -44,12 +44,10 @@ public class GameManager : MonoBehaviour
     public void PlacePiece(GameObject stone)
     {
         int x, y, z;
-        Debug.Log("石を配置します");
         // 座標を配列に変換する関数
         Vector3 stoneposition = WorldToBoard(stone.transform.position);
         x = (int)stoneposition.x;
         y = (int)stoneposition.z;
-        Debug.Log(x + "," + y);
         
         // 石が置けるか判定
         while (!IsValidPlacement(x, y)){
@@ -59,6 +57,7 @@ public class GameManager : MonoBehaviour
         for (z = 0; z < 4; z++){
             if (board[x, y, z] == -1){
                 board[x, y, z] = currentPlayer;
+                Debug.Log(x + "," + y + "," + z);
                 break;
             }
         }
