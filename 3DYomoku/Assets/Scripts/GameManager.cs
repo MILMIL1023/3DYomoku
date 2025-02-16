@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public CameraBasedSpawner cameraBasedSpawner; // CameraBasedSpawner スクリプトへの参照
     // ボードのサイズ設定
     public int boardWidth = 4;
     public int boardHeight = 4;
@@ -35,13 +35,17 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void test()
+    {
+        Debug.Log("test");
+    }
+
     // 石を配置する処理
-    public void PlacePiece()
+    public void PlacePiece(GameObject stone)
     {
         int x, y, z;
         // 座標を配列に変換する関数
-        List<Vector3> positions = cameraBasedSpawner.GetObjectPositions();
-        Vector3 stoneposition = WorldToBoard(positions[0]);
+        Vector3 stoneposition = WorldToBoard(stone.transform.position);
         x = (int)stoneposition.x;
         y = (int)stoneposition.z;
         
@@ -53,6 +57,7 @@ public class GameManager : MonoBehaviour
         for (z = 0; z < 4; z++){
             if (board[x, y, z] == -1){
                 board[x, y, z] = currentPlayer;
+                Debug.Log(x + "," + y + "," + z);
                 break;
             }
         }
