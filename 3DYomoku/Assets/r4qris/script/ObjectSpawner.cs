@@ -9,7 +9,7 @@ public class CameraBasedSpawner : MonoBehaviour
     private int activeCameraIndex = 0; // 現在アクティブなカメラのインデックス
     public string clickableTag = "Clickable"; // クリック可能なオブジェクトのタグ
     public List<GameObject> spawnedObjects = new List<GameObject>(); // 生成されたオブジェクトのリスト
-
+    public GameManager gamemanager;
     void Start()
     {
         if (cameras.Length > 0)
@@ -87,7 +87,7 @@ public class CameraBasedSpawner : MonoBehaviour
                     );
 
                     GameObject spawnedObject = Instantiate(prefab, spawnPosition, Quaternion.identity);
-
+                    // gamemanager.PlacePiece();
                     spawnedObjects.Add(spawnedObject); // リストに追加
 
                     Collider spawnedCollider = spawnedObject.GetComponent<Collider>();
