@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class CameraBasedSpawner : MonoBehaviour
 {
-    public GameObject prefab; // 生成するPrefab
+    public GameObject Blackprefab; // 生成するPrefab
+    public GameObject Whiteprefab; // 生成するPrefab
     public Camera[] cameras; // 複数のカメラを格納する配列
     private int activeCameraIndex = 0; // 現在アクティブなカメラのインデックス
     public string clickableTag = "Clickable"; // クリック可能なオブジェクトのタグ
     public List<GameObject> spawnedObjects = new List<GameObject>(); // 生成されたオブジェクトのリスト
-    public GameManager gamemanager;
+    public GameManager gameManager;
     void Start()
     {
         if (cameras.Length > 0)
@@ -19,6 +20,10 @@ public class CameraBasedSpawner : MonoBehaviour
         else
         {
             Debug.LogError("カメラが設定されていません！");
+        }
+        if (Blackprefab == null) {
+            Debug.LogError("Blackprefab がインスペクターで割り当てられていません");
+            return;
         }
     }
 
@@ -65,9 +70,10 @@ public class CameraBasedSpawner : MonoBehaviour
             }
 
             Collider clickedCollider = hit.collider;
-            Collider prefabCollider = prefab.GetComponent<Collider>();
+            Collider BlackprefabCollider = Blackprefab.GetComponent<Collider>();
+            Collider WhiteprefabCollider = Whiteprefab.GetComponent<Collider>();
 
-            if (clickedCollider != null && prefabCollider != null)
+            if (clickedCollider != null && BlackprefabCollider != null && WhiteprefabCollider != null)
             {
                 Vector3 rayOrigin = clickedCollider.bounds.center;
                 rayOrigin.y = clickedCollider.bounds.max.y + 0.1f;
@@ -82,24 +88,42 @@ public class CameraBasedSpawner : MonoBehaviour
 
                     Vector3 spawnPosition = new Vector3(
                         clickedCollider.bounds.center.x,
-                        downHit.collider.bounds.max.y + prefabCollider.bounds.extents.y,
+                        downHit.collider.bounds.max.y + BlackprefabCollider.bounds.extents.y,
                         clickedCollider.bounds.center.z
                     );
+                    if (gameManager == null) {
+                        gameManager = FindObjectOfType<GameManager>();
+                    }else{
+                        if (gameManager.currentPlayer == 0){
+                            GameObject spawnedObject = Instantiate(Blackprefab, spawnPosition, Quaternion.identity);
+                            gameManager.PlacePiece(spawnedObject);
+                            spawnedObjects.Add(spawnedObject);
+                            Collider spawnedCollider = spawnedObject.GetComponent<Collider>();
+                            if (spawnedCollider != null)
+                            {
+                                spawnedCollider.enabled = false;
+                                StartCoroutine(EnableColliderAfterFrame(spawnedCollider));
+                            }
 
-                    GameObject spawnedObject = Instantiate(prefab, spawnPosition, Quaternion.identity);
-                    // gamemanager.PlacePiece();
-                    spawnedObjects.Add(spawnedObject); // リストに追加
+                            spawnedObject.transform.SetParent(belowObject.transform);
 
-                    Collider spawnedCollider = spawnedObject.GetComponent<Collider>();
-                    if (spawnedCollider != null)
-                    {
-                        spawnedCollider.enabled = false;
-                        StartCoroutine(EnableColliderAfterFrame(spawnedCollider));
+                            Debug.Log($"Prefab を生成しました。位置: {spawnPosition} 親オブジェクト: {belowObject.name}");
+                        }else if (gameManager.currentPlayer == 1){
+                            GameObject spawnedObject = Instantiate(Whiteprefab, spawnPosition, Quaternion.identity);
+                            gameManager.PlacePiece(spawnedObject);
+                            spawnedObjects.Add(spawnedObject);
+                            Collider spawnedCollider = spawnedObject.GetComponent<Collider>();
+                            if (spawnedCollider != null)
+                            {
+                                spawnedCollider.enabled = false;
+                                StartCoroutine(EnableColliderAfterFrame(spawnedCollider));
+                            }
+
+                            spawnedObject.transform.SetParent(belowObject.transform);
+
+                            Debug.Log($"Prefab を生成しました。位置: {spawnPosition} 親オブジェクト: {belowObject.name}");
+                        }
                     }
-
-                    spawnedObject.transform.SetParent(belowObject.transform);
-
-                    Debug.Log($"Prefab を生成しました。位置: {spawnPosition} 親オブジェクト: {belowObject.name}");
                 }
                 else
                 {
