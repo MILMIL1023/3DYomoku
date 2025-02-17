@@ -11,10 +11,12 @@ public class GameManager : MonoBehaviour
     public int boardDepth = 4;
 
     // 盤面の状態を表す３次元配列(空=-1, プレイヤー１=0, プレイヤー２=1)
-    private int [,,] board;
+    public int [,,] board;
 
     // 現在のターン(0 or 1)
     public int currentPlayer = 0;
+
+    public CreateCPU createCPU;
     
     public void Start()
     {
@@ -61,6 +63,7 @@ public class GameManager : MonoBehaviour
             EndGame(true, currentPlayer);
         }else{
             NextTurn();
+            //createCPU.cpuhand();
         }
     }
 
