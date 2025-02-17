@@ -67,9 +67,9 @@ public class GameManager : MonoBehaviour
     // 座標から配列に変換
     public Vector3Int WorldToBoard(Vector3 worldPos)
     {
-        int x = (int)worldPos.x;
-        int y = (int)worldPos.y;
-        int z = (int)worldPos.z;
+        int x = (int)worldPos.x/2;
+        int y = (int)worldPos.y/2;
+        int z = (int)worldPos.z/2;
         return new Vector3Int(x, y, z);
     }
 
