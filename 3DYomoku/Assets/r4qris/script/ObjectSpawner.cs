@@ -21,10 +21,6 @@ public class CameraBasedSpawner : MonoBehaviour
         {
             Debug.LogError("カメラが設定されていません！");
         }
-        if (Blackprefab == null) {
-            Debug.LogError("Blackprefab がインスペクターで割り当てられていません");
-            return;
-        }
     }
 
     void Update()
@@ -107,7 +103,7 @@ public class CameraBasedSpawner : MonoBehaviour
 
                             spawnedObject.transform.SetParent(belowObject.transform);
 
-                            Debug.Log($"Prefab を生成しました。位置: {spawnPosition} 親オブジェクト: {belowObject.name}");
+                            //Debug.Log($"Prefab を生成しました。位置: {spawnPosition} 親オブジェクト: {belowObject.name}");
                         }else if (gameManager.currentPlayer == 1){
                             GameObject spawnedObject = Instantiate(Whiteprefab, spawnPosition, Quaternion.identity);
                             gameManager.PlacePiece(spawnedObject);
@@ -121,7 +117,7 @@ public class CameraBasedSpawner : MonoBehaviour
 
                             spawnedObject.transform.SetParent(belowObject.transform);
 
-                            Debug.Log($"Prefab を生成しました。位置: {spawnPosition} 親オブジェクト: {belowObject.name}");
+                            //Debug.Log($"Prefab を生成しました。位置: {spawnPosition} 親オブジェクト: {belowObject.name}");
                         }
                     }
                 }

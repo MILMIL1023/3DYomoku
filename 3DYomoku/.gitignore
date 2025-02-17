@@ -71,3 +71,21 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# 画像ファイル（必要に応じて種類を追加）
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.tif
+*.tiff
+
+# フォントファイル
+*.ttf
+*.otf
+*.woff
+*.woff2
+
+
+NotoSansJP-Medium SDF.asset
